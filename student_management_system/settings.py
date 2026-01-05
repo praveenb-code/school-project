@@ -96,13 +96,14 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("student_management_system1"),
-        "USER": os.environ.get("student_management_system"),
-        "PASSWORD": os.environ.get("a2bnlau1d4hDyw6YVRbvJbkOhi25ODN5"),
-        "HOST": os.environ.get("dpg-d5br13ngi27c73911ts0-a"),
-        "PORT": "5432",
+        "NAME": os.environ["student_management_system1"],
+        "USER": os.environ["student_management_system"],
+        "PASSWORD": os.environ["a2bnlau1d4hDyw6YVRbvJbkOhi25ODN5"],
+        "HOST": os.environ["dpg-d5br13ngi27c73911ts0-a"],
+        "PORT": os.environ.get("5432", "5432"),
     }
 }
+
 
 
 
